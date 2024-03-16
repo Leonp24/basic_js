@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Dom</title>
+</head>
+<body>
+    <h1>Daftar Buah</h1>
+    <ul id="namaBuah">
+        <li>Jeruk</li>
+        <li>Apel</li>
+        <li>Durian</li>
+    </ul>
+
+    <form id="formTambahBuah">
+        <label for="inputBuah">Tambah Buah:</label>
+        <input type="text" id="inputBuah" name="buah">
+        <button type="submit">Tambah</button>
+    </form>
+
+    <script>
+        document.getElementById("formTambahBuah").addEventListener("submit", function(event) {
+            event.preventDefault(); // Menghentikan aksi default form (submit)
+
+            // Mendapatkan nilai dari input
+            let inputBuah = document.getElementById("inputBuah").value;
+
+            // Membuat elemen li baru untuk buah yang ditambahkan
+            let newBuah = document.createElement("li");
+            newBuah.textContent = inputBuah;
+
+            // Menambahkan elemen li baru ke dalam ul
+            document.getElementById("namaBuah").appendChild(newBuah);
+
+            // Mengosongkan input setelah ditambahkan
+            document.getElementById("inputBuah").value = "";
+        });
+    </script>
+</body>
+</html>
