@@ -18,7 +18,19 @@ let b = 10;
 // console.log(a >= b);   // false
 // console.log(a <= b);   // true
 
-// operator ternary (conditional operator)
+// operator ternary (conditional operator) Struktur umumnya adalah "condition ? expr1 : expr2". Jika kondisi bernilai true, maka expr1 dieksekusi, dan jika kondisi bernilai false, maka expr2 dieksekusi.
 let age = 20;
 let status = (age >= 18) ? "Dewasa" : "Remaja";
-console.log(status);  // Output: Dewasa
+// console.log(status);  // Output: Dewasa 
+
+// Operator Logika (Logical Operators):
+// Operator logika digunakan untuk menggabungkan beberapa kondisi atau ekspresi logis.
+
+// && (AND): Menghasilkan true jika kedua operand bernilai true.
+// || (OR): Menghasilkan true jika salah satu dari operand bernilai true.
+// ! (NOT): Menghasilkan kebalikan dari nilai operand.
+let x = 10;
+let y = 5;
+console.log((x > 5) && (y < 10));  // true
+console.log((x > 5) || (y > 10));  // true
+console.log(!(x == y));            // true
